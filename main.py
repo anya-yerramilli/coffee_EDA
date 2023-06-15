@@ -68,7 +68,7 @@ st.write("Which processing methods are commonly used in each country?")
 fig = plt.figure(figsize=(10, 6))
 sns.scatterplot( data=coffee_dataframe, x="Country of Origin", y="Processing Method")
 plt.title('Processing Method Popularity in Countries\n')
-plt.xticks(rotation = 75) 
+plt.xticks(rotation = 90) 
 st.pyplot(fig)
 
 #EXPIRATION CHART
