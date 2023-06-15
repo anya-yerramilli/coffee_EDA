@@ -10,6 +10,7 @@ st.title("Coffee Quality Exploratory Data Analysis")
 st.markdown('---')
 
 # names + bio (grade + experience)
+st.header("The Team")
 st.write(
   "Hey I am Daniel I am in 12th Grade and I like to play video games, watch movies, and read books that interest me."
 )
@@ -26,11 +27,14 @@ st.write(
 )
 st.markdown('---')
 
-# context for dataset (importance, hypothesis)
 
 # the dataset
+st.header("About the Dataset")
 coffee_dataframe = pd.read_csv("coffee.csv")
 st.write(coffee_dataframe.head())
+st.markdown("---")
+
+# context for dataset (importance, hypothesis)
 
 # cleaning the data
 columns_to_drop = [
