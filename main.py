@@ -65,7 +65,7 @@ st.plotly_chart(fig)
 
 # DOT CHART 
 st.write("Which processing methods are commonly used in each country?") 
-fig = plt.figure(figsize=(10, 4))
+fig = plt.figure(figsize=(10, 6))
 sns.scatterplot( data=coffee_dataframe, x="Country of Origin", y="Processing Method")
 plt.title('Processing Method Popularity in Countries\n')
 st.pyplot(fig)
