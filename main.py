@@ -50,6 +50,7 @@ coffee_dataframe.dropna(inplace=True)
 coffee_dataframe.reset_index(drop=True, inplace=True)
 
 # 3-4 visualizations
+st.header("Visualizing the Data")
 
 # SCATTER MATRIX
 numerical_coffee_df = coffee_dataframe[[
