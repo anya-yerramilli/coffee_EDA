@@ -28,8 +28,11 @@ st.markdown('---')
 
 # context for dataset (importance, hypothesis)
 
+# the dataset
+st.write(coffee_dataframe.head())
+
 # cleaning the data
-coffee_dataframe = pd.read_csv("coffee.csv")
+coffee_dataframe = pd.read_csv("cofee.csv")
 
 columns_to_drop = [
   'Grading Date', 'Owner', 'Region', 'Certification Body', 'Number of Bags',
@@ -55,8 +58,13 @@ numerical_coffee_df = coffee_dataframe[[
 fig = px.scatter_matrix(numerical_coffee_df)
 st.plotly_chart(fig)
 
-# EXPIRATION COUNT PLOT
+# DOT CHART 
 
+fig = plt.figure(figsize=(10, 4))
+sns.scatterplot( data=coffee_dataframe, x="Country of Origin", y="Processing Method")
+st.pyplot(fig)
+
+#EXPIRATION CHART
 coffee_dataframe['Expiration'] = coffee_dataframe['Expiration'].apply(
   lambda x: pd.to_datetime(x))
 coffee_dataframe.sort_values(by=['Expiration'], inplace=True)
@@ -66,33 +74,7 @@ fig = plt.figure(figsize=(10, 4))
 sns.countplot(x = "Expiration", data = coffee_dataframe)
 st.pyplot(fig)
 
-# ax = sns.countplot(y="Expiration", data=coffee_dataframe)
-
-# plt.title('Expiration Dates')
-
-# ax.set_yticklabels(ax.get_yticklabels(), fontsize=4)
-# plt.tight_layout()
-# #plt.show()
-
-# st.pyplot(ax)
-
-# DOT CHART
-
-# ax = sns.scatterplot(
-#   data=coffee_dataframe,
-#   x="Country of Origin",
-#   y="Processing Method",
-# )
-# plt.title('Processing Method Popularity in Countries\n')
-# ax.set_xticklabels(ax.get_xticklabels(), rotation=40, ha="right")
-# #plt.show()
-
-# st.pyplot(ax)
-
-fig = plt.figure(figsize=(10, 4))
-sns.scatterplot( data=coffee_dataframe, x="Country of Origin", y="Processing Method")
-st.pyplot(fig)
 
 # analysis of visualizations + findings
 
-st.write(coffee_dataframe.head(1))
+
