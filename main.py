@@ -76,16 +76,22 @@ st.pyplot(fig)
 
 # st.pyplot(ax)
 
-ax = sns.scatterplot(
-  data=coffee_dataframe,
-  x="Country of Origin",
-  y="Processing Method",
-)
-plt.title('Processing Method Popularity in Countries\n')
-ax.set_xticklabels(ax.get_xticklabels(), rotation=40, ha="right")
-#plt.show()
+# DOT CHART
 
-st.pyplot(ax)
+# ax = sns.scatterplot(
+#   data=coffee_dataframe,
+#   x="Country of Origin",
+#   y="Processing Method",
+# )
+# plt.title('Processing Method Popularity in Countries\n')
+# ax.set_xticklabels(ax.get_xticklabels(), rotation=40, ha="right")
+# #plt.show()
+
+# st.pyplot(ax)
+
+fig = plt.figure(figsize=(10, 4))
+sns.scatterplot( data=coffee_dataframe, x="Country of Origin", y="Processing Method")
+st.pyplot(fig)
 
 # analysis of visualizations + findings
 
