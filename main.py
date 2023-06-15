@@ -68,6 +68,7 @@ st.write("Which processing methods are commonly used in each country?")
 fig = plt.figure(figsize=(10, 6))
 sns.scatterplot( data=coffee_dataframe, x="Country of Origin", y="Processing Method")
 plt.title('Processing Method Popularity in Countries\n')
+plt.xticks(rotation = 45) 
 st.pyplot(fig)
 
 #EXPIRATION CHART
@@ -80,6 +81,7 @@ coffee_dataframe['Expiration'].dt.strftime('%Y-%m-%d')
 fig = plt.figure(figsize=(10, 4))
 sns.countplot(x = "Expiration", data = coffee_dataframe)
 plt.title('Expiration Dates')
+plt.xticks(rotation = 45) 
 st.pyplot(fig)
 
 
