@@ -82,7 +82,7 @@ coffee_dataframe['Expiration'] = coffee_dataframe['Expiration'].apply(
 fig = plt.figure(figsize=(10, 4))
 sns.countplot(x = "Expiration", data = coffee_dataframe)
 plt.title('Expiration Dates')
-plt.xticks(rotation = 90) 
+plt.xticks(rotation = 90, fontsize = 'x-small') 
 st.pyplot(fig)
 
 
