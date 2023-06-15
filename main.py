@@ -76,7 +76,8 @@ st.write("When do most coffee bags expire?")
 coffee_dataframe['Expiration'] = coffee_dataframe['Expiration'].apply(
   lambda x: pd.to_datetime(x))
 coffee_dataframe.sort_values(by=['Expiration'], inplace=True)
-coffee_dataframe['Expiration'].dt.strftime('%Y-%m-%d')
+coffee_dataframe['Expiration'] = coffee_dataframe['Expiration'].apply(
+  lambda d: str(d.year) + '-' + str(d.month) + '-' + str(d.day))
 
 fig = plt.figure(figsize=(10, 4))
 sns.countplot(x = "Expiration", data = coffee_dataframe)
