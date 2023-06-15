@@ -77,9 +77,9 @@ coffee_dataframe.sort_values(by=['Expiration'], inplace=True)
 coffee_dataframe['Expiration'].dt.strftime('%Y-%m-%d')
 
 fig = plt.figure(figsize=(10, 4))
-sns.countplot(x = "Expiration", data = coffee_dataframe)
+ax = sns.countplot(x = "Expiration", data = coffee_dataframe)
 plt.title('Processing Method Popularity in Countries\n')
-fig.set_xticklabels(fig.get_xticklabels(), rotation = 40, ha = "right")
+ax.set_xticklabels(ax.get_xticklabels(), rotation = 40, ha = "right")
 st.pyplot(fig)
 
 
