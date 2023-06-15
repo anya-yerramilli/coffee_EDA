@@ -3,4 +3,4 @@ wget
 streamlit
 seaborn
 plotly.express
-matplotlib.pyplot
+matplotlib
