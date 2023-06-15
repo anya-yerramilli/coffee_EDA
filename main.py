@@ -62,6 +62,7 @@ coffee_dataframe['Expiration'] = coffee_dataframe['Expiration'].apply(
 coffee_dataframe.sort_values(by=['Expiration'], inplace=True)
 coffee_dataframe['Expiration'].dt.strftime('%Y-%m-%d')
 
+fig = plt.figure(figsize=(10, 4))
 sns.countplot(x = "Expiration", data = coffee_dataframe)
 st.pyplot(fig)
 
