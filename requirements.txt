@@ -1,3 +1,6 @@
 pandas
 wget
 streamlit
+seaborn
+plotly.express
+matplotlib.pyplot
