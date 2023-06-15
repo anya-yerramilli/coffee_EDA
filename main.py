@@ -53,23 +53,27 @@ numerical_coffee_df = coffee_dataframe[[
   'Acidity',
 ]]
 fig = px.scatter_matrix(numerical_coffee_df)
-#fig.show()
 st.plotly_chart(fig)
+
+# EXPIRATION COUNT PLOT
 
 coffee_dataframe['Expiration'] = coffee_dataframe['Expiration'].apply(
   lambda x: pd.to_datetime(x))
 coffee_dataframe.sort_values(by=['Expiration'], inplace=True)
 coffee_dataframe['Expiration'].dt.strftime('%Y-%m-%d')
 
-ax = sns.countplot(y="Expiration", data=coffee_dataframe)
+sns.countplot(x = "Expiration", data = coffee_dataframe)
+st.pyplot(fig)
 
-plt.title('Expiration Dates')
+# ax = sns.countplot(y="Expiration", data=coffee_dataframe)
 
-ax.set_yticklabels(ax.get_yticklabels(), fontsize=4)
-plt.tight_layout()
-#plt.show()
+# plt.title('Expiration Dates')
 
-st.pyplot(ax)
+# ax.set_yticklabels(ax.get_yticklabels(), fontsize=4)
+# plt.tight_layout()
+# #plt.show()
+
+# st.pyplot(ax)
 
 ax = sns.scatterplot(
   data=coffee_dataframe,
