@@ -1,0 +1,87 @@
+import streamlit as st
+import pandas as pd
+import seaborn as sns
+import plotly.express as px
+import matplotlib
+import matplotlib.pyplot as plt
+
+# title of project
+st.title("Coffee Quality Exploratory Data Analysis")
+st.markdown('---')
+
+# names + bio (grade + experience)
+st.write(
+  "Hey I am Daniel I am in 12th Grade and I like to play video games, watch movies, and read books that interest me."
+)
+st.write(
+  "My name is Valeria and I am in 11th grade. I like to paint and draw.")
+st.write(
+  "My name is Nathan Yee and I'm in 11th grade. I like to swim and play waterpolo, and I watch movies in my free time."
+)
+st.write(
+  "My name is Jasmine Li and I'm in 11th grade. I enjoy playing instruments and music production, as well as reading and creative writing."
+)
+st.write(
+  "My name is Ellie Chan and I'm in 7th grade. I like to practice doing archery and I like playing with my dog."
+)
+st.markdown('---')
+
+# context for dataset (importance, hypothesis)
+
+# cleaning the data
+coffee_dataframe = pd.read_csv("cofee.csv")
+
+columns_to_drop = [
+  'Grading Date', 'Owner', 'Region', 'Certification Body', 'Number of Bags',
+  'Bag Weight', 'Unnamed: 0', 'ID', 'Farm Name', 'Lot Number', 'Mill',
+  'ICO Number', 'Company', 'Producer', 'In-Country Partner', 'Status',
+  'Certification Address', 'Certification Contact', 'Defects', 'Uniformity',
+  'Clean Cup', 'Sweetness'
+]
+
+coffee_dataframe.drop(columns_to_drop, axis=1, inplace=True)
+coffee_dataframe.dropna(inplace=True)
+coffee_dataframe.reset_index(drop=True, inplace=True)
+
+# 3-4 visualizations
+
+# SCATTER MATRIX
+numerical_coffee_df = coffee_dataframe[[
+  'Aroma',
+  'Flavor',
+  'Aftertaste',
+  'Acidity',
+]]
+fig = px.scatter_matrix(numerical_coffee_df)
+#fig.show()
+st.plotly_chart(fig)
+
+coffee_dataframe['Expiration'] = coffee_dataframe['Expiration'].apply(
+  lambda x: pd.to_datetime(x))
+coffee_dataframe.sort_values(by=['Expiration'], inplace=True)
+coffee_dataframe['Expiration'].dt.strftime('%Y-%m-%d')
+
+ax = sns.countplot(y="Expiration", data=coffee_dataframe)
+
+plt.title('Expiration Dates')
+
+ax.set_yticklabels(ax.get_yticklabels(), fontsize=4)
+plt.tight_layout()
+#plt.show()
+
+st.pyplot(ax)
+
+ax = sns.scatterplot(
+  data=coffee_dataframe,
+  x="Country of Origin",
+  y="Processing Method",
+)
+plt.title('Processing Method Popularity in Countries\n')
+ax.set_xticklabels(ax.get_xticklabels(), rotation=40, ha="right")
+#plt.show()
+
+st.pyplot(ax)
+
+# analysis of visualizations + findings
+
+st.write(coffee_dataframe.head(1))
