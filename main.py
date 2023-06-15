@@ -29,7 +29,7 @@ st.markdown('---')
 # context for dataset (importance, hypothesis)
 
 # the dataset
-coffee_dataframe = pd.read_csv("cofee.csv")
+coffee_dataframe = pd.read_csv("coffee.csv")
 st.write(coffee_dataframe.head())
 
 # cleaning the data
@@ -58,7 +58,6 @@ fig = px.scatter_matrix(numerical_coffee_df)
 st.plotly_chart(fig)
 
 # DOT CHART 
-
 fig = plt.figure(figsize=(10, 4))
 sns.scatterplot( data=coffee_dataframe, x="Country of Origin", y="Processing Method")
 st.pyplot(fig)
