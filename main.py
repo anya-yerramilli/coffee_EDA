@@ -29,7 +29,7 @@ st.markdown('---')
 # context for dataset (importance, hypothesis)
 
 # cleaning the data
-coffee_dataframe = pd.read_csv("cofee.csv")
+coffee_dataframe = pd.read_csv("coffee.csv")
 
 columns_to_drop = [
   'Grading Date', 'Owner', 'Region', 'Certification Body', 'Number of Bags',
