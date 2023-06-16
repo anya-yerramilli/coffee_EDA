@@ -40,7 +40,7 @@ st.write('It is important we analyze the various types of coffees found througho
 st.markdown("---")
 
 st.subheader('Hypotheses')
-st.write('We believe that the different factors used in the process of creating coffee affect the coffee's final aroma, flavor, aftertaste, and acidity.')
+st.write('We believe that the different factors used in the process of creating coffee affect the coffee\'s final aroma, flavor, aftertaste, and acidity.')
 
 # cleaning the data
 columns_to_drop = [
