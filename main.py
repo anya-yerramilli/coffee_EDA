@@ -32,7 +32,6 @@ st.markdown('---')
 st.header("About the Dataset")
 coffee_dataframe = pd.read_csv("coffee.csv")
 st.write(coffee_dataframe.head())
-st.write('This data comes from the Coffee Quality Institution (CQI) which is a nonprofit whose mission is to better quality coffee worldwide. The data contains the country of origin, farm name, lot number, mill and other data.')
 st.write('The dataset was uploaded from a website called Kaggle which has many datasets for people to use. The dataset\'s name is called "Coffee Quality Data (Coffee Quality Institution (CQI) May-2023)". The CQI, a nonprofit whose mission is to better quality coffee worldwide, keeps a database on the web for the purpose of having a resource for coffee researchers, professionals, and others who might need this data. This database contains a variety of information on the production, processing, and sensory evaluation of coffee, including country of origin, farm name, lot number, mill and other data. It also has other factors that might affect the quality of coffee. Some sensory evaluations (quality scores of the coffee) are Aroma, which refers to the scent or fragrance of the coffee, and Flavor, which is how the coffee tastes (evaluated on sweetness, bitterness, acidity, and other flavor notes).')
 
 # context for dataset (importance, hypothesis)
