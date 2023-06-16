@@ -75,7 +75,7 @@ sns.scatterplot( data=coffee_dataframe, x="Country of Origin", y="Processing Met
 plt.title('Processing Method Popularity in Countries\n')
 plt.xticks(rotation = 90) 
 st.pyplot(fig)
-st.write('<ANALYSIS>')
+st.write('In almost every coffee growing country, farms use the washed/wet, natural dry, and honey method. Countries with the best tasting coffee such as Colombia and Taiwan use numerous methods to grow their crops. Whereas in places such as Kenya and Uganda, these drier, less arable regions use the less popular wet hulling or semi-lavado methods.')
 st.markdown("---")
 
 #EXPIRATION CHART
