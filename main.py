@@ -36,7 +36,7 @@ st.write('<ABOUT THE DATA SET>')
 
 # context for dataset (importance, hypothesis)
 st.write('<HYPOTHESIS>')
-st.write('<IMPORTANCE OF DATA + ANALYSIS')
+st.write('<IMPORTANCE OF DATA + ANALYSIS>')
 st.markdown("---")
 
 # cleaning the data
