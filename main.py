@@ -65,7 +65,7 @@ numerical_coffee_df = coffee_dataframe[[
 ]]
 fig = px.scatter_matrix(numerical_coffee_df)
 st.plotly_chart(fig)
-st.write(We can see a common pattern between the relationships of the different categories of Flavor, Aroma, Aftertaste, and Acidity, that being they are all displayed in a linear-like formation. This pattern can reflect the value of coffee, as the types of coffee with the best flavor and aftertaste, often have the best Aroma and Acidity and vice versa. The outliers illustrated in the graphs are priminenet examples of the best and worst types of coffe found across the globe.)
+st.write('We can see a common pattern between the relationships of the different categories of Flavor, Aroma, Aftertaste, and Acidity, that being they are all displayed in a linear-like formation. This pattern can reflect the value of coffee, as the types of coffee with the best flavor and aftertaste, often have the best Aroma and Acidity and vice versa. The outliers illustrated in the graphs are priminenet examples of the best and worst types of coffe found across the globe.')
 st.markdown("---")
 
 # DOT CHART 
