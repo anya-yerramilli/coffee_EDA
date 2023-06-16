@@ -57,7 +57,7 @@ coffee_dataframe.reset_index(drop=True, inplace=True)
 st.header("Visualizing the Data")
 
 # SCATTER MATRIX
-st.write("What is the relationship between the aroma, flavor, aftertaste, and acidity of coffee?") 
+st.subheader("What is the relationship between the aroma, flavor, aftertaste, and acidity of coffee?") 
 numerical_coffee_df = coffee_dataframe[[
   'Aroma',
   'Flavor',
@@ -70,7 +70,7 @@ st.write('We can see a common pattern between the relationships of the different
 st.markdown("---")
 
 # DOT CHART 
-st.write("Which processing methods are commonly used in each country?") 
+st.subheader("Which processing methods are commonly used in each country?") 
 fig = plt.figure(figsize=(10, 6))
 sns.scatterplot( data=coffee_dataframe, x="Country of Origin", y="Processing Method")
 plt.title('Processing Method Popularity in Countries\n')
@@ -80,7 +80,7 @@ st.write('In almost every coffee growing country, farms use the washed/wet, natu
 st.markdown("---")
 
 #EXPIRATION CHART
-st.write("When do most coffee bags expire?") 
+st.subheader("When do most coffee bags expire?") 
 coffee_dataframe['Expiration'] = coffee_dataframe['Expiration'].apply(
   lambda x: pd.to_datetime(x))
 coffee_dataframe.sort_values(by=['Expiration'], inplace=True)
