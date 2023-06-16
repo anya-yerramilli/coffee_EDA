@@ -32,7 +32,7 @@ st.markdown('---')
 st.header("About the Dataset")
 coffee_dataframe = pd.read_csv("coffee.csv")
 st.write(coffee_dataframe.head())
-st.write('<ABOUT THE DATA SET>')
+st.write('This data comes from the Coffee Quality Institution (CQI) which is a nonprofit whose mission is to better quality coffee worldwide. The data contains the country of origin, farm name, lot number, mill and other data.')
 
 # context for dataset (importance, hypothesis)
 st.write('<HYPOTHESIS>')
