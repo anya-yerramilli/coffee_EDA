@@ -36,7 +36,7 @@ st.write('This data comes from the Coffee Quality Institution (CQI) which is a n
 
 # context for dataset (importance, hypothesis)
 st.write('<HYPOTHESIS>')
-st.write('<IMPORTANCE OF DATA + ANALYSIS>')
+st.write('It's important we analyze the various types of coffees found throughout the world to display and inform others of the best coffee options they have. Different people have different preferences, and information regarding certain expiration dates, flavor, or processing methods can help others decide on their desired coffee choices.')
 st.markdown("---")
 
 # cleaning the data
