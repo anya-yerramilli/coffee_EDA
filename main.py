@@ -39,7 +39,8 @@ st.write('The dataset was uploaded from a website called Kaggle which has many d
 st.write('It is important we analyze the various types of coffees found throughout the world to display and inform others of the best coffee options they have. Different people have different preferences, and information regarding certain expiration dates, flavor, or processing methods can help others decide on their desired coffee choices.')
 
 st.subheader('Hypotheses')
-st.write('We believe that the different factors used in the process of creating coffee affect the coffee\'s final aroma, flavor, aftertaste, and acidity.')
+st.write('1. We believe that the different factors used in the process of creating coffee affect the coffee\'s final aroma, flavor, aftertaste, and acidity.')
+st.write('2. We believe that the natural/dry method of processing coffee will be the most popular and best method of producing coffee.')
 st.markdown("---")
 
 # cleaning the data
