@@ -33,11 +33,11 @@ st.header("About the Dataset")
 coffee_dataframe = pd.read_csv("coffee.csv")
 st.write(coffee_dataframe.head())
 st.write('<ABOUT THE DATA SET>')
-st.markdown("---")
 
 # context for dataset (importance, hypothesis)
 st.write('<HYPOTHESIS>')
 st.write('<IMPORTANCE OF DATA + ANALYSIS')
+st.markdown("---")
 
 # cleaning the data
 columns_to_drop = [
@@ -66,6 +66,7 @@ numerical_coffee_df = coffee_dataframe[[
 fig = px.scatter_matrix(numerical_coffee_df)
 st.plotly_chart(fig)
 st.write('<ANALYSIS>')
+st.markdown("---")
 
 # DOT CHART 
 st.write("Which processing methods are commonly used in each country?") 
@@ -75,6 +76,7 @@ plt.title('Processing Method Popularity in Countries\n')
 plt.xticks(rotation = 90) 
 st.pyplot(fig)
 st.write('<ANALYSIS>')
+st.markdown("---")
 
 #EXPIRATION CHART
 st.write("When do most coffee bags expire?") 
@@ -90,5 +92,6 @@ plt.title('Expiration Dates')
 plt.xticks(rotation = 90, fontsize = 'x-small') 
 st.pyplot(fig)
 st.write('<ANALYSIS>')
+st.markdown("---")
 
 
