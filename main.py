@@ -98,4 +98,7 @@ st.pyplot(fig)
 st.write('This countplot was created to visualize how many coffee bags share the same expiration dates, ordered from most recent to the latest expiration dates. We can see that many expiration dates listed on the graph only have one unique coffee bag, though some share a little under or over 5 coffee bags. However, the largest gaps are present in the expiration dates November 15th, 2023, and January 6th, 2024, as there are 40 coffee bags that expire on the November date and 25 that expire on the January date. This is potentially due to those coffee bags having been produced at the same time by the same company or farm.')
 st.markdown("---")
 
+st.header('Conclusion')
+st.write('In conclusion, we can infer that the best valued coffee comes from places such as Taiwan and Colombia. They contain the most coffee producing farms, and have the best processing methods to create the best coffee, evident in their high ratings in flavor and aftertaste.  ')
+
 
